@@ -1,9 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { RedButton } from "./Button";
+import { BlueButton } from "./Button1";
 
 export default function Home() {
+
+  const test = true;
   return (
     <main className={styles.main}>
+      {/* shoule ignore BlueButtonCSS */}
+      {test ? <RedButton/>: <BlueButton/>}
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
